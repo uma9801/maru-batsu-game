@@ -1,0 +1,74 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+}
+
+h1 {
+    color: #3a241d;
+    text-align: center;
+}
+
+#game-page {
+    display: grid;
+    grid-template-columns: 30% 1fr 30%;
+    grid-template-rows: 40px 98vh;
+    grid-template-areas:
+        "left header right"
+        "left main right";
+}
+
+#left-container {
+    grid-area: left;
+    justify-self: start;
+}
+
+#right-container {
+    grid-area: right;
+    justify-self: end;
+}
+
+.container {
+    background-color: #beeece;
+    /* 親グリッドの行に合わせて伸縮するよう固定高さを外す */
+    width: 100%;
+    height: 100%;
+        display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列 */
+    /* 4行を game-page の高さに合わせるため、各行の高さを計算して指定 */
+    grid-template-rows: repeat(4, calc(95vh / 4));
+    gap: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+    overflow: hidden; /* はみ出しを隠す */
+}
+
+.item-holder {
+    /* シンプルなセルラッパーに変更 */
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    position: relative; /* フロー内表示 */
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* アスペクト比を保ってセルに収める */
+    display: block;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+#game-list {
+    grid-area: main;
+    height: 95vh;
+}
+
+.line-top {
+    height: 4%;
+    width: 4%;
+    background: #d1e1df;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 60%;
+    left: 20%;
+}
