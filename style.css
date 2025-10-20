@@ -31,7 +31,7 @@ h1 {
     /* 親グリッドの行に合わせて伸縮するよう固定高さを外す */
     width: 100%;
     height: 100%;
-        display: grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2列 */
     /* 4行を game-page の高さに合わせるため、各行の高さを計算して指定 */
     grid-template-rows: repeat(4, calc(95vh / 4));
