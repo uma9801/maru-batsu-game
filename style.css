@@ -38,7 +38,6 @@ h1 {
     gap: 8px;
     padding: 8px;
     box-sizing: border-box;
-    overflow: hidden; /* はみ出しを隠す */
 }
 
 .item-holder {
@@ -46,15 +45,18 @@ h1 {
     display: block;
     width: 100%;
     height: 100%;
+    position: relative; /* 追加: 子要素の absolute の基準にする */
 }
 
 .item {
-    position: relative; /* フロー内表示 */
+    position: absolute; /* 変更: top/left で直接動かせるようにする */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: contain; /* アスペクト比を保ってセルに収める */
     display: block;
-    margin: 0 auto;
+    margin: 0;
     z-index: 2;
 }
 
