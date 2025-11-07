@@ -47,7 +47,10 @@
     }
 
     function rebindAll() {
-        document.querySelectorAll('.item').forEach(bindDragToItem);
+        // 対象セレクタ：既存の .item に加えて、.line-top, .line-left 等も含める
+        // html側で明示的に data-draggable を付けた要素を対象とする方法もある（今回は採用していない）
+        document.querySelectorAll('.item, .line-top, .line-end, .line-left, .line-right')
+            .forEach(bindDragToItem);
     }
 
     if (document.readyState === 'loading') {
