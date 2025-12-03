@@ -64,43 +64,112 @@ h1 {
     grid-area: main;
     height: 95vh;
 }
-
-.line-top {
-    height: 4%;
+#line-top {
+    height: 2%;
     width: 40%;
     background: #d48216;
     border-radius: 1rem;
     position: absolute;
-    bottom: 60%;
+    bottom: 55%;
     left: 30%;
 }
-
-.line-end {
-    height: 4%;
+#line-end {
+    height: 2%;
     width: 40%;
     background: #d48216;
     border-radius: 1rem;
     position: absolute;
-    bottom: 30%;
+    bottom: 35%;
     left: 30%;
 }
-
-.line-left {
+#line-left {
     height: 80%;
-    width: 2%;
+    width: 1%;
     background: #d48216;
     border-radius: 1rem;
     position: absolute;
     bottom: 5%;
-    left: 41%;
+    left: 44%;
+}
+#line-right {
+    height: 80%;
+    width: 1%;
+    background: #d48216;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 5%;
+    left: 55%;
 }
 
-.line-right {
-    height: 80%;
-    width: 2%;
+#line-horizontal-1 {
+    height: 2%;
+    width: 40%;
     background: #d48216;
     border-radius: 1rem;
     position: absolute;
-    bottom: 5%;
-    left: 57%;
+    top : 0%;
+    left: 0%;
+}
+#line-horizontal-2 {
+    height: 2%;
+    width: 40%;
+    background: #d48216;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0%;
+    left: 60%;
+}
+#line-horizontal-3 {
+    height: 2%;
+    width: 40%;
+    background: #d48216;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+#line-horizontal-4 {
+    height: 2%;
+    width: 40%;
+    background: #d48216;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 0%;
+    left: 60%;
+}
+#line-vertical-1 {
+    height: 80%;
+    width: 1%;
+    background: #d48216;
+    border-radius: 1rem;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+}
+#line-vertical-2 {
+    height: 80%;
+    width: 1%;
+    background: #d48216;
+    border-radius: 1rem;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+#line-vertical-3 {
+    height: 80%;
+    width: 1%;
+    background: #d48216;
+    border-radius: 1rem;
+    position: absolute;
+    top: 10%;
+    right: 15%;
+}
+#line-vertical-4 {
+    height: 80%;
+    width: 1%;
+    background: #d48216;
+    border-radius: 1rem;
+    position: absolute;
+    top: 10%;
+    right: 0%;
 }
