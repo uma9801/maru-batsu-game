@@ -1,5 +1,7 @@
 body {
     font-family: helvetica, arial, sans-serif;
+    /* デフォルトで上部に設定されているマージンを削除 */
+    margin: 0;
 }
 
 h1 {
@@ -9,11 +11,35 @@ h1 {
 
 #game-page {
     display: grid;
-    grid-template-columns: 30% 1fr 30%;
-    grid-template-rows: 40px 98vh;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 10vh 90vh;
     grid-template-areas:
-        "left header right"
+        "l_team main r_team"
         "left main right";
+}
+
+.title {
+    background-color: #beeece;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* テキストの縁取り */
+    text-shadow: 
+        1px 1px 0 white,
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white;
+}
+#left-title {
+    grid-area: l_team;
+}
+#right-title {
+    grid-area: r_team;
 }
 
 #left-container {
@@ -34,9 +60,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2列 */
     /* 4行を game-page の高さに合わせるため、各行の高さを計算して指定 */
-    grid-template-rows: repeat(4, calc(95vh / 4));
-    gap: 8px;
-    padding: 8px;
+    grid-template-rows: repeat(4, calc(85vh / 4));
     box-sizing: border-box;
 }
 
@@ -50,7 +74,7 @@ h1 {
 
 .item {
     position: absolute; /* 変更: top/left で直接動かせるようにする */
-    top: 0;
+    top: 15%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -66,45 +90,45 @@ h1 {
 }
 #line-top {
     height: 2%;
-    width: 40%;
-    background: #d48216;
+    width: 60%;
+    background: #dfa608;
     border-radius: 1rem;
     position: absolute;
-    bottom: 55%;
-    left: 30%;
+    top: 40%;
+    left: 20%;
 }
 #line-end {
     height: 2%;
-    width: 40%;
-    background: #d48216;
+    width: 60%;
+    background: #dfa608;
     border-radius: 1rem;
     position: absolute;
-    bottom: 35%;
-    left: 30%;
+        bottom: 40%;
+    left: 20%;
 }
 #line-left {
-    height: 80%;
+    height: 100%;
     width: 1%;
-    background: #d48216;
+    background: #dfa608;
     border-radius: 1rem;
     position: absolute;
-    bottom: 5%;
-    left: 44%;
+    bottom: 0%;
+    left: 45%;
 }
 #line-right {
-    height: 80%;
+    height: 100%;
     width: 1%;
-    background: #d48216;
+    background: #dfa608;
     border-radius: 1rem;
     position: absolute;
-    bottom: 5%;
-    left: 55%;
+    bottom: 0%;
+    right: 45%;
 }
 
 #line-horizontal-1 {
     height: 2%;
-    width: 40%;
-    background: #d48216;
+    width: 60%;
+    background: #dfa608;
     border-radius: 1rem;
     position: absolute;
     top : 0%;
@@ -112,17 +136,17 @@ h1 {
 }
 #line-horizontal-2 {
     height: 2%;
-    width: 40%;
-    background: #d48216;
+    width: 60%;
+    background: #dfa608;
     border-radius: 1rem;
     position: absolute;
     top: 0%;
-    left: 60%;
+    right: 0%;
 }
 #line-horizontal-3 {
     height: 2%;
-    width: 40%;
-    background: #d48216;
+    width: 60%;
+    background: #dfa608;
     border-radius: 1rem;
     position: absolute;
     bottom: 0%;
@@ -130,46 +154,44 @@ h1 {
 }
 #line-horizontal-4 {
     height: 2%;
-    width: 40%;
-    background: #d48216;
+    width: 60%;
+    background: #dfa608;
     border-radius: 1rem;
     position: absolute;
     bottom: 0%;
-    left: 60%;
+    right: 0%;
 }
 #line-vertical-1 {
-    height: 80%;
+    height: 100%;
     width: 1%;
-    background: #d48216;
+    background: #dfa608;
     border-radius: 1rem;
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 0%;
 }
 #line-vertical-2 {
-    height: 80%;
+    height: 100%;
     width: 1%;
-    background: #d48216;
+    background: #dfa608;
     border-radius: 1rem;
     position: absolute;
-    top: 10%;
-    left: 15%;
+    top: 0%;
+    left: 19.5%;
 }
 #line-vertical-3 {
-    height: 80%;
+    height: 100%;
     width: 1%;
-    background: #d48216;
+    background: #dfa608;
     border-radius: 1rem;
     position: absolute;
-    top: 10%;
-    right: 15%;
+    right: 19.5%;
 }
 #line-vertical-4 {
-    height: 80%;
+    height: 100%;
     width: 1%;
-    background: #d48216;
+    background: #dfa608;
     border-radius: 1rem;
     position: absolute;
-    top: 10%;
     right: 0%;
 }
